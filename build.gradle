@@ -1,0 +1,53 @@
+buildscript {
+    ext {
+        kotlinVersion = '1.5.10'
+        jvmTarget = '11'
+    }
+}
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
+    id 'org.jetbrains.dokka' version "1.6.0"
+    id 'application'
+}
+
+group = 'de.upb.sicp'
+version = '0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation 'org.jetbrains.kotlinx:kotlin-deeplearning-api:0.3.0'
+    implementation 'com.github.ajalt.clikt:clikt:3.3.0'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.14.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.14.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "$jvmTarget"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "$jvmTarget"
+}
+
+application {
+    mainClassName = 'CLI.kt'
+}
+
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'CLIKt'
+    }
+}
