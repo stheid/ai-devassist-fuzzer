@@ -1,0 +1,13 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/ai-devassist-fuzzer/[root]/index.html
+$dokka.location://main/#kotlin.Array[kotlin.String]/PointingToDeclaration/ai-devassist-fuzzer/[root]/main.html
+$dokka.location:/CLI///PointingToDeclaration/ai-devassist-fuzzer/[root]/-c-l-i/index.html
+$dokka.location:/CLI/CLI/#/PointingToDeclaration/ai-devassist-fuzzer/[root]/-c-l-i/-c-l-i.html
+$dokka.location:/CLI/grammar/#/PointingToDeclaration/ai-devassist-fuzzer/[root]/-c-l-i/grammar.html
+$dokka.location:/CLI/maxIterations/#/PointingToDeclaration/ai-devassist-fuzzer/[root]/-c-l-i/max-iterations.html
+$dokka.location:/CLI/run/#/PointingToDeclaration/ai-devassist-fuzzer/[root]/-c-l-i/run.html
+$dokka.location:scratch.deeplearning////PointingToDeclaration/ai-devassist-fuzzer/scratch.deeplearning/index.html
+$dokka.location:scratch.deeplearning//main/#/PointingToDeclaration/ai-devassist-fuzzer/scratch.deeplearning/main.html
+scratch.deeplearning
+
