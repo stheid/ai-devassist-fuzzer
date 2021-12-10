@@ -1,0 +1,7 @@
+# create dataset
+
+
+
+# main loop
+while true
+    train NN
