@@ -3,10 +3,15 @@ package inputGenerators.neuzz
 import inputGenerators.Fuzzer
 import mu.KLogging
 
+data class DataPoint(val input: ByteArray, val coverage: IntArray)
+
+
 class NeuzzFuzzer(jazzerCommand: Any) : Fuzzer {
     var isWarmedUp = false
-    var model = NeuzzModel()
     lateinit var batch: Array<ByteArray>
+
+    val dataSet = mutableListOf<DataPoint>()
+    val model = nn
 
     companion object : KLogging()
 
@@ -37,10 +42,10 @@ class NeuzzFuzzer(jazzerCommand: Any) : Fuzzer {
 
             TODO("Not yet implemented")
 
-            model.retrain(listOf())
+            retrain(listOf())
             isWarmedUp = true
         }
-        batch = model.generateInputs()
+        batch = generateInputs()
         return batch
     }
 
@@ -55,7 +60,30 @@ class NeuzzFuzzer(jazzerCommand: Any) : Fuzzer {
         val newData = batch.zip(cov).map { (input, cov) -> DataPoint(input, cov) }
 
         // train NN
-        model.retrain(newData)
+        retrain(newData)
+    }
+
+    /**
+     * Retrain model with additional training data
+     * @param newData additional data collected
+     */
+    private fun retrain(newData: List<DataPoint>) {
+
+        TODO("Not yet implemented")
+
+
+
+        dataSet.addAll(newData)
+    }
+
+
+    private fun generateInputs(): Array<ByteArray> {
+
+        // select collection of parent files
+
+        // generate new mutated inputs using backprop and exaustive search (Algo 1 from the paper)
+
+        TODO("Not yet implemented")
     }
 }
 
