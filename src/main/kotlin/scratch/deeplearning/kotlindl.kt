@@ -95,9 +95,13 @@ fun main() {
         it.logSummary()
 
         it.fit(dataset = train, epochs = EPOCHS, batchSize = TRAINING_BATCH_SIZE)
+    }
 
+    lenet5Classic.use {
         val accuracy = it.evaluate(dataset = test, batchSize = TEST_BATCH_SIZE).metrics[Metrics.ACCURACY]
 
         println("Accuracy: $accuracy")
     }
+
+
 }
