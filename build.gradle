@@ -25,6 +25,8 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlin-deeplearning-api:0.3.0'
     implementation 'com.github.ajalt.clikt:clikt:3.3.0'
 
+    implementation 'org.tensorflow:tensorflow-core-platform:0.4.0'
+
     // logging
     implementation 'io.github.microutils:kotlin-logging-jvm:2.1.0'
     implementation 'org.slf4j:slf4j-log4j12:1.7.32'
